@@ -1,26 +1,30 @@
 <!doctype html>
 <html lang="pt">
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>API com MVC NODE</title>
+    <title>MVC Exemplo Node.JS</title>
     <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-
-<body>
-    <ul>
-        <% for(var i=0; i<bancos.length; i++) {%>
-        <li>
-            Nome: <%= bancos[i].LongName %>
-        </li>
-        <li>
-            Idade: <%= bancos[i].LongName %>
-            <br>
-            <br>
-        </li>
-        <% } %>
-    </ul>>
-</body>
-
+  </head>
+  <body>
+    <div class="container">
+      <br/><br/><br/>
+      <h1>TRABALHO DE ARQUITETURA WEB - PROFESSORA: Michelle - FACULDADE: Newton Paiva</h1>
+      <h2>NOME: Willian Rodrigues de Souza RA: 12108453</h2>
+      <br/>
+      <% if (bancos.length > 0) { %>
+        <div class="row">
+          <% for(var i = 0; i < bancos.length; i++) {%>
+            <div class="col-md-12 jumbotron">
+              <h4 ><%= bancos[i].COMPE %></h4>
+              <p><%= bancos[i].ShortName %></p>
+              <p><%= bancos[i].Document %></p>
+              <p><%= bancos[i].Type %></p>
+              <p><%= bancos[i].Url %></p>
+            </div>
+          <% } %>
+        </div>
+      <% } %>
+    </div>
+  </body>
 </html>
